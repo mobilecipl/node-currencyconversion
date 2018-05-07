@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  
+  h1 Currency Conversion
+  p.lead Covert currecy to required currency.
+  hr
+  form.form-horizontal(id='signup-form', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      .col-sm-6
+        input.form-control(type='number', name='amount',  id='amount1', placeholder='AMOUNT', min='0')
+      .col-sm-6
+        select.select.form-control.input-sm( name='amount',id='rate1')
+         each val, key in rates.rates
+            if key === 'USD'
+              option(value=val selected=true) US DOLLAR     
+            else if key === 'CZK'
+              option(value=val)  Czech Republic Koruna
+            else if key === 'EUR'
+              option(value=val) Euro
+            else if key === 'PLN'
+              option(value=val) Polish Zloty 
+    .form-group
+      .col-sm-6
+        input.form-control(type='number', name='amount', id='amount2', placeholder='AMOUNT', min='0')
+      .col-sm-6
+        select.select.form-control.input-sm( name='amount',id='rate2')
+          each val, key in rates.rates
+            if key === 'USD'
+              option(value=val selected=true) US DOLLAR     
+            else if key === 'CZK'
+              option(value=val)  Czech Republic Koruna
+            else if key === 'EUR'
+              option(value=val) Euro
+            else if key === 'PLN'
+              option(value=val) Polish Zloty 
+
