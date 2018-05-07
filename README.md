@@ -18,7 +18,7 @@ The easiest way to get started is to clone the repository:
 
 ```bash
 # Get the latest snapshot
-git clone https://github.com/sahat/node-currencyconversion.git 
+git clone https://github.com/mobilecipl/node-currencyconversion.git
 
 # Change directory
 cd node-currencyconversion
